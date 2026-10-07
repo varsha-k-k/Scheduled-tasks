@@ -3,10 +3,10 @@ import os
 import requests
 import smtplib
 
-EMAIL = MY_EMAIL
-PASSWD =MY_PASSWORD
+EMAIL = os.environ.get(MY_EMAIL)
+PASSWD =os.environ.get(MY_PASSWORD)
 
-API_KEY =WEATHER_API
+API_KEY =os.environ.get(WEATHER_API)
 MY_LAT =11.921349053933902
 MY_LON=75.35472439934574
 # client = Client(TWILIO_APIKEY , TWILIO_CLIENTSECRET ,TWILIO_ACCSID)
