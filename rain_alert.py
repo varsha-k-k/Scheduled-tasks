@@ -1,8 +1,6 @@
 # make a call to 5 days forecast api
 import os
 import requests
-from twilio.rest import Client
-
 import smtplib
 
 EMAIL = MY_EMAIL
