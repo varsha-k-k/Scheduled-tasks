@@ -30,6 +30,6 @@ if will_rain:
         connection.starttls()
         connection.login(user=EMAIL, password=PASSWD)
         connection.sendmail(from_addr=EMAIL,
-                            to_addrs="EMAIL",
+                            to_addrs=EMAIL,
                             msg=f"Subject:Bring an umbrella!! \n\n It will rain today buddy")
 
