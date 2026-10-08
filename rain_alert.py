@@ -1,4 +1,4 @@
-# make a call to 5 days forecast api
+
 import os
 import requests
 import smtplib
@@ -9,7 +9,6 @@ PASSWD =os.environ.get("MY_PASSWORD")
 API_KEY =os.environ.get("WEATHER_API")
 MY_LAT =11.921349053933902
 MY_LON=75.35472439934574
-# client = Client(TWILIO_APIKEY , TWILIO_CLIENTSECRET ,TWILIO_ACCSID)
 
 para = {"lat" :MY_LAT,
         "lon":MY_LON,
@@ -31,6 +30,6 @@ if will_rain:
         connection.starttls()
         connection.login(user=EMAIL, password=PASSWD)
         connection.sendmail(from_addr=EMAIL,
-                            to_addrs="codingpracticee56@gmail.com",
+                            to_addrs="EMAIL",
                             msg=f"Subject:Bring an umbrella!! \n\n It will rain today buddy")
 
