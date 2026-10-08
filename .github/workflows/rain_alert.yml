@@ -27,5 +27,5 @@ jobs:
         env:
           PASSWD: ${{ secrets.MY_PASSWORD}}
           EMAIL: ${{ secrets.MY_EMAIL }}
-          API_KEY: ${{ secrets.WEATHER_API }}
+          WEATHER_API: ${{ secrets.WEATHER_API }}
         run: python rain_alert.py
