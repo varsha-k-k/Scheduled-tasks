@@ -26,10 +26,12 @@ for hour_data in weather_data["list"]:
         will_rain = True
 if will_rain:
     print("success")
+        msg = "Subject: Bring an umbrella!!\n\nIt will rain today buddy"
+
     with smtplib.SMTP("smtp.gmail.com" ,587) as connection:
         connection.starttls()
         connection.login(user=EMAIL, password=PASSWD)
         connection.sendmail(from_addr=EMAIL,
                             to_addrs=EMAIL,
-                            msg=f"Subject:Bring an umbrella!! \n\n It will rain today buddy")
+                            msg=msg)
 
