@@ -26,7 +26,7 @@ for hour_data in weather_data["list"]:
         will_rain = True
 if will_rain:
     print("success")
-    with smtplib.SMTP("smtp.gmail.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com" ,587) as connection:
         connection.starttls()
         connection.login(user=EMAIL, password=PASSWD)
         connection.sendmail(from_addr=EMAIL,
